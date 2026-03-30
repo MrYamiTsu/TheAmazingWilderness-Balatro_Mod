@@ -6,6 +6,8 @@ Taw_config = SMODS.current_mod.config
 assert(SMODS.load_file('utils/function.lua'))()
 assert(SMODS.load_file('utils/ownership.lua'))()
 assert(SMODS.load_file('items/joker.lua'))()
+assert(SMODS.load_file('items/stake.lua'))()
+
 --#endregion
 --#region ATLAS --
 SMODS.Atlas{
@@ -19,6 +21,12 @@ SMODS.Atlas{
     path = 'Joker.png',
     px = 71,
     py = 95
+}
+SMODS.Atlas{
+    key = 'Stakes',
+    path = 'Stake.png',
+    px = 29,
+    py = 29
 }
 
 --#endregion
