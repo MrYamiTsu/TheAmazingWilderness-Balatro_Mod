@@ -25,15 +25,15 @@ SMODS.Stake:take_ownership("black", { --Black
 
 SMODS.Stake:take_ownership("purple", { --Purple
     atlas = 'Stakes',
-    pos = {x = 1, y = 1},
+    pos = {x = 0, y = 1},
 }, true)
 
 SMODS.Stake:take_ownership("orange", { --Orange
     atlas = 'Stakes',
-    pos = {x = 2, y = 1},
+    pos = {x = 1, y = 1},
 }, true)
 
 SMODS.Stake:take_ownership("gold", { --Gold
     atlas = 'Stakes',
-    pos = {x = 3, y = 1},
+    pos = {x = 2, y = 1},
 }, true)
