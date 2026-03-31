@@ -112,22 +112,7 @@ return {
             }
             --#endregion
         },
-        Other={
-            quinn_credit = {
-                name = 'Artwork',
-                text = {
-                    'Original artworks',
-                    'by {C:green,E:2}Quinn{}'
-                }
-            },
-            yotam_credit = {
-                name = 'Artwork',
-                text = {
-                    'Original artworks',
-                    'by {C:green,E:2}Yotam{}'
-                }
-            }
-        },
+        Other={},
         Planet={},
         Spectral={},
         Stake={},
@@ -146,7 +131,9 @@ return {
             k_taw_grow = 'Grow'
         },
         high_scores={},
-        labels={},
+        labels={
+            taw_credit = 'Artwork by '
+        },
         poker_hand_descriptions={},
         poker_hands={},
         quips={},

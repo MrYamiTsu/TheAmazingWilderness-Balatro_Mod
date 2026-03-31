@@ -3,7 +3,7 @@ function Taw.grow(card, grow_key)
         blocking = true,
         func = function()
             SMODS.calculate_effect({ message = localize("k_taw_grow"), colour = G.C.CHANCE }, card)
-            card:set_ability("j_taw_dog")
+            card:set_ability(grow_key)
             return true
         end
     }))

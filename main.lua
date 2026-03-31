@@ -28,12 +28,15 @@ SMODS.Atlas{
     px = 29,
     py = 29
 }
+SMODS.Atlas{
+    key = 'Stickers',
+    path = 'Sticker.png',
+    px = 71,
+    py = 95
+}
 
 --#endregion
 --#region CUSTOM COLOUR --
-loc_colour()
-G.ARGS.LOC_COLOURS.giga_Food = HEX('F2A5A6FF')
-G.ARGS.LOC_COLOURS.giga_Artefact = HEX('444444FF')
 --#endregion
 --#region INITIALISATION --
 --[[

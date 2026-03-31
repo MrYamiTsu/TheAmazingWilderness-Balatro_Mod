@@ -38,8 +38,8 @@ SMODS.Joker{ --BlackBearCub
     blueprint_compat = true,
     eternal_compat = true,
     config = { extra = {
-         s_mult = 1,
-         suit = 'Diamonds'
+        s_mult = 1,
+        suit = 'Diamonds'
     }},
     loc_vars = function(self,info_queue,center)
         return{vars = {center.ability.extra.s_mult + center.config.center.taw_data.mult,
@@ -74,8 +74,8 @@ SMODS.Joker{ --PolarCub
     blueprint_compat = true,
     eternal_compat = true,
     config = { extra = {
-         s_mult = 1,
-         suit = 'Hearts'
+        s_mult = 1,
+        suit = 'Hearts'
     }},
     loc_vars = function(self,info_queue,center)
         return{vars = {center.ability.extra.s_mult + center.config.center.taw_data.mult,
@@ -105,18 +105,16 @@ SMODS.Joker{ --GrizzlyCub
         mult_add = 1,
         mult = 0
     },
+    art_credit = "Quinn",
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
     eternal_compat = true,
     config = { extra = {
-         s_mult = 1,
-         suit = 'Spades'
+        s_mult = 1,
+        suit = 'Spades'
     }},
     loc_vars = function(self,info_queue,center)
-        if love.keyboard.isDown('lshift') or love.keyboard.isDown('rshift') then
-            info_queue[#info_queue+1] = {set = 'Other', key = 'quinn_credit'}
-        end
         return{vars = {center.ability.extra.s_mult + center.config.center.taw_data.mult,
                        localize(center.ability.extra.suit, 'suits_singular'),
                        center.config.center.taw_data.grow_time}}
@@ -138,19 +136,20 @@ SMODS.Joker{ --GrizzlyCub
 SMODS.Joker{ --PandaCub
     key = "panda_cub",
     atlas = 'Jokers',
-    pos = {x = 0, y = 0},
+    pos = {x = 3, y = 0},
     taw_data = {
         grow_time = 1,
         mult_add = 1,
         mult = 0
     },
+    art_credit = "Yotam",
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
     eternal_compat = true,
     config = { extra = {
-         s_mult = 1,
-         suit = 'Clubs'
+        s_mult = 1,
+        suit = 'Clubs'
     }},
     loc_vars = function(self,info_queue,center)
         return{vars = {center.ability.extra.s_mult + center.config.center.taw_data.mult,
@@ -267,11 +266,12 @@ SMODS.Joker:take_ownership("j_wrathful_joker", { --Grizzly
 }, false)
 SMODS.Joker:take_ownership("j_gluttenous_joker", { --GiantPanda
     atlas = 'Jokers',
-    pos = {x = 0, y = 0},
+    pos = {x = 2, y = 0},
     taw_data = {
         mult_add = 1,
         mult = 0
     },
+    art_credit = "Yotam",
     in_pool = function(self, args)
         return false
     end,
