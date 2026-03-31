@@ -24,27 +24,16 @@ SMODS.Joker:take_ownership("j_joker", { --Puppy
         end
     end
 }, false)
-SMODS.Joker{ --BlackBearCub
-    key = "blackBear_cub",
+SMODS.Joker:take_ownership("j_greedy_joker", { --BlackBearCub
     atlas = 'Jokers',
     pos = {x = 0, y = 0},
     taw_data = {
-        grow_time = 1,
+        grow_time = 2,
         mult_add = 1,
         mult = 0
     },
-    cost = 4,
-    rarity = 1,
-    blueprint_compat = true,
-    eternal_compat = true,
-    config = { extra = {
-        s_mult = 1,
-        suit = 'Diamonds'
-    }},
     loc_vars = function(self,info_queue,center)
-        return{vars = {center.ability.extra.s_mult + center.config.center.taw_data.mult,
-                       localize(center.ability.extra.suit, 'suits_singular'),
-                       center.config.center.taw_data.grow_time}}
+        return{vars = {center.ability.extra.s_mult + center.config.center.taw_data.mult, localize(center.ability.extra.suit, 'suits_singular')}}
     end,
     calculate = function(self,card,context)
         if context.individual and context.cardarea == G.play and context.other_card:is_suit(card.ability.extra.suit) then
@@ -55,32 +44,21 @@ SMODS.Joker{ --BlackBearCub
         if context.end_of_round and context.main_eval then
             card.config.center.taw_data.grow_time = card.config.center.taw_data.grow_time - 1
             if card.config.center.taw_data.grow_time <= 0 then
-                Taw.grow(card, 'j_greedy_joker')
+                Taw.grow(card, 'j_taw_blackBear')
             end
         end
     end
-}
-SMODS.Joker{ --PolarCub
-    key = "polar_cub",
+}, false)
+SMODS.Joker:take_ownership("j_lusty_joker", { --PolarCub
     atlas = 'Jokers',
     pos = {x = 0, y = 0},
     taw_data = {
-        grow_time = 1,
+        grow_time = 2,
         mult_add = 1,
         mult = 0
     },
-    cost = 4,
-    rarity = 1,
-    blueprint_compat = true,
-    eternal_compat = true,
-    config = { extra = {
-        s_mult = 1,
-        suit = 'Hearts'
-    }},
     loc_vars = function(self,info_queue,center)
-        return{vars = {center.ability.extra.s_mult + center.config.center.taw_data.mult,
-                       localize(center.ability.extra.suit, 'suits_singular'),
-                       center.config.center.taw_data.grow_time}}
+        return{vars = {center.ability.extra.s_mult + center.config.center.taw_data.mult, localize(center.ability.extra.suit, 'suits_singular')}}
     end,
     calculate = function(self,card,context)
         if context.individual and context.cardarea == G.play and context.other_card:is_suit(card.ability.extra.suit) then
@@ -91,33 +69,21 @@ SMODS.Joker{ --PolarCub
         if context.end_of_round and context.main_eval then
             card.config.center.taw_data.grow_time = card.config.center.taw_data.grow_time - 1
             if card.config.center.taw_data.grow_time <= 0 then
-                Taw.grow(card, 'j_lusty_joker')
+                Taw.grow(card, 'j_taw_polarBear')
             end
         end
     end
-}
-SMODS.Joker{ --GrizzlyCub
-    key = "grizzly_cub",
+}, false)
+SMODS.Joker:take_ownership("j_wrathful_joker", { --GrizzlyCub
     atlas = 'Jokers',
-    pos = {x = 1, y = 0},
+    pos = {x = 0, y = 0},
     taw_data = {
-        grow_time = 1,
+        grow_time = 2,
         mult_add = 1,
         mult = 0
     },
-    art_credit = "Quinn",
-    cost = 4,
-    rarity = 1,
-    blueprint_compat = true,
-    eternal_compat = true,
-    config = { extra = {
-        s_mult = 1,
-        suit = 'Spades'
-    }},
     loc_vars = function(self,info_queue,center)
-        return{vars = {center.ability.extra.s_mult + center.config.center.taw_data.mult,
-                       localize(center.ability.extra.suit, 'suits_singular'),
-                       center.config.center.taw_data.grow_time}}
+        return{vars = {center.ability.extra.s_mult + center.config.center.taw_data.mult, localize(center.ability.extra.suit, 'suits_singular')}}
     end,
     calculate = function(self,card,context)
         if context.individual and context.cardarea == G.play and context.other_card:is_suit(card.ability.extra.suit) then
@@ -128,33 +94,21 @@ SMODS.Joker{ --GrizzlyCub
         if context.end_of_round and context.main_eval then
             card.config.center.taw_data.grow_time = card.config.center.taw_data.grow_time - 1
             if card.config.center.taw_data.grow_time <= 0 then
-                Taw.grow(card, 'j_wrathful_joker')
+                Taw.grow(card, 'j_taw_grizzly')
             end
         end
     end
-}
-SMODS.Joker{ --PandaCub
-    key = "panda_cub",
+}, false)
+SMODS.Joker:take_ownership("j_gluttenous_joker", { --PandaCub
     atlas = 'Jokers',
     pos = {x = 3, y = 0},
     taw_data = {
-        grow_time = 1,
+        grow_time = 2,
         mult_add = 1,
         mult = 0
     },
-    art_credit = "Yotam",
-    cost = 4,
-    rarity = 1,
-    blueprint_compat = true,
-    eternal_compat = true,
-    config = { extra = {
-        s_mult = 1,
-        suit = 'Clubs'
-    }},
     loc_vars = function(self,info_queue,center)
-        return{vars = {center.ability.extra.s_mult + center.config.center.taw_data.mult,
-                       localize(center.ability.extra.suit, 'suits_singular'),
-                       center.config.center.taw_data.grow_time}}
+        return{vars = {center.ability.extra.s_mult + center.config.center.taw_data.mult, localize(center.ability.extra.suit, 'suits_singular')}}
     end,
     calculate = function(self,card,context)
         if context.individual and context.cardarea == G.play and context.other_card:is_suit(card.ability.extra.suit) then
@@ -165,11 +119,11 @@ SMODS.Joker{ --PandaCub
         if context.end_of_round and context.main_eval then
             card.config.center.taw_data.grow_time = card.config.center.taw_data.grow_time - 1
             if card.config.center.taw_data.grow_time <= 0 then
-                Taw.grow(card, 'j_gluttenous_joker')
+                Taw.grow(card, 'j_taw_panda')
             end
         end
     end
-}
+}, false)
 --#endregion
 --#region Normal --
 SMODS.Joker{ --Dog
@@ -201,13 +155,22 @@ SMODS.Joker{ --Dog
         end
     end
 }
-SMODS.Joker:take_ownership("j_greedy_joker", { --BlackBear
+SMODS.Joker{ --BlackBear
+    key = 'blackBear',
     atlas = 'Jokers',
     pos = {x = 0, y = 0},
     taw_data = {
-        mult_add = 1,
+        mult_add = 2,
         mult = 0
     },
+    cost = 6,
+    rarity = 1,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = { extra = {
+        s_mult = 6,
+        suit = 'Diamonds'
+    }},
     in_pool = function(self, args)
         return false
     end,
@@ -221,14 +184,23 @@ SMODS.Joker:take_ownership("j_greedy_joker", { --BlackBear
             }
         end
     end
-}, false)
-SMODS.Joker:take_ownership("j_lusty_joker", { --PolarBear
+}
+SMODS.Joker{ --PolarBear
+    key = 'polarBear',
     atlas = 'Jokers',
     pos = {x = 0, y = 0},
     taw_data = {
-        mult_add = 1,
+        mult_add = 2,
         mult = 0
     },
+    cost = 6,
+    rarity = 1,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = { extra = {
+        s_mult = 6,
+        suit = 'Hearts'
+    }},
     in_pool = function(self, args)
         return false
     end,
@@ -242,14 +214,23 @@ SMODS.Joker:take_ownership("j_lusty_joker", { --PolarBear
             }
         end
     end
-}, false)
-SMODS.Joker:take_ownership("j_wrathful_joker", { --Grizzly
+}
+SMODS.Joker{ --Grizzly
+    key = 'grizzly',
     atlas = 'Jokers',
     pos = {x = 0, y = 0},
     taw_data = {
-        mult_add = 1,
+        mult_add = 2,
         mult = 0
     },
+    cost = 6,
+    rarity = 1,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = { extra = {
+        s_mult = 6,
+        suit = 'Spades'
+    }},
     in_pool = function(self, args)
         return false
     end,
@@ -263,15 +244,23 @@ SMODS.Joker:take_ownership("j_wrathful_joker", { --Grizzly
             }
         end
     end
-}, false)
-SMODS.Joker:take_ownership("j_gluttenous_joker", { --GiantPanda
+}
+SMODS.Joker{ --GiantPanda
+    key = 'panda',
     atlas = 'Jokers',
     pos = {x = 2, y = 0},
     taw_data = {
-        mult_add = 1,
+        mult_add = 2,
         mult = 0
     },
-    art_credit = "Yotam",
+    cost = 6,
+    rarity = 1,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = { extra = {
+        s_mult = 6,
+        suit = 'Clubs'
+    }},
     in_pool = function(self, args)
         return false
     end,
@@ -285,7 +274,7 @@ SMODS.Joker:take_ownership("j_gluttenous_joker", { --GiantPanda
             }
         end
     end
-}, false)
+}
 --#endregion
 --#region Elder --
 --#endregion

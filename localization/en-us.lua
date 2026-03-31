@@ -18,7 +18,7 @@ return {
                     }
                 }
             },
-            j_taw_blackBear_cub = {
+            j_greedy_joker = {
                 name = 'Black Bear Cub',
                 text = {
                     {
@@ -31,7 +31,7 @@ return {
                     }
                 }
             },
-            j_taw_polar_cub = {
+            j_lusty_joker = {
                 name = 'Polar Cub',
                 text = {
                     {
@@ -44,7 +44,7 @@ return {
                     }
                 }
             },
-            j_taw_grizzly_cub = {
+            j_wrathful_joker = {
                 name = 'Grizzly Cub',
                 text = {
                     {
@@ -57,7 +57,7 @@ return {
                     }
                 }
             },
-            j_taw_panda_cub = {
+            j_gluttenous_joker = {
                 name = 'Panda Cub',
                 text = {
                     {
@@ -78,7 +78,7 @@ return {
                     '{C:mult}+#1#{} Mult'
                 }
             },
-            j_greedy_joker = {
+            j_taw_blackBear = {
                 name = 'Black Bear',
                 text = {
                     'Played cards with',
@@ -86,7 +86,7 @@ return {
                     '{C:mult}+#1#{} Mult when scored'
                 }
             },
-            j_lusty_joker = {
+            j_taw_polarBear = {
                 name = 'Polar Bear',
                 text = {
                     'Played cards with',
@@ -94,15 +94,15 @@ return {
                     '{C:mult}+#1#{} Mult when scored'
                 }
             },
-            j_wrathful_joker = {
-                name = 'Grizzly Bear',
+            j_taw_grizzly = {
+                name = 'Grizzly',
                 text = {
                     'Played cards with',
                     '{C:spades}#2#{} suit suit give',
                     '{C:mult}+#1#{} Mult when scored'
                 }
             },
-            j_gluttenous_joker = {
+            j_taw_panda = {
                 name = 'Giant Panda',
                 text = {
                     'Played cards with',
