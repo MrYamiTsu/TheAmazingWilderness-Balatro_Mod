@@ -12,8 +12,8 @@ pattern = '''
 local cols
 '''
 payload = '''
-if obj and obj.art_credit then
-    badges[#badges + 1] = create_badge(localize('taw_credit', "labels")..obj.art_credit, G.C.CLEAR, SMODS.get_badge_text_colour(G.C.GREY), 0.9)
+if obj and obj.taw_data and obj.taw_data.art_credit then
+    badges[#badges + 1] = create_badge(localize('taw_credit', "labels")..obj.taw_data.art_credit, G.C.CLEAR, SMODS.get_badge_text_colour(G.C.GREY), 0.9)
 end
 
 '''
