@@ -23,7 +23,7 @@ return {
             },
             --#endregion
             --#region BEARS
-            j_greedy_joker = {
+            j_taw_blackBearCub = {
                 name = 'Black Bear Cub',
                 text = {{
                     'Played cards with',
@@ -41,7 +41,7 @@ return {
                     '{C:mult}+#1#{} Mult when scored'
                 }
             },
-            j_lusty_joker = {
+            j_taw_polarCub = {
                 name = 'Polar Cub',
                 text = {{
                     'Played cards with',
@@ -59,7 +59,7 @@ return {
                     '{C:mult}+#1#{} Mult when scored'
                 }
             },
-            j_wrathful_joker = {
+            j_taw_grizzlyCub = {
                 name = 'Grizzly Cub',
                 text = {{
                     'Played cards with',
@@ -77,7 +77,7 @@ return {
                     '{C:mult}+#1#{} Mult when scored'
                 }
             },
-            j_gluttenous_joker = {
+            j_taw_pandaCub = {
                 name = 'Panda Cub',
                 text = {{
                     'Played cards with',
@@ -97,7 +97,7 @@ return {
             },
             --#endregion
             --#region DOGS
-            j_jolly = {
+            j_taw_goldenPuppy = {
                 name = 'Golden Puppy',
                 text = {{
                     '{C:mult}+#1#{} Mult if played',
@@ -115,7 +115,7 @@ return {
                     'a {C:attention}#2#{}'
                 }
             },
-            j_zany = {
+            j_taw_shepherdPup = {
                 name = 'Shepherd Pup',
                 text = {{
                     '{C:mult}+#1#{} Mult if scored',
@@ -133,7 +133,7 @@ return {
                     'a {C:attention}#2#{}'
                 }
             },
-            j_mad = {
+            j_taw_dalmatianPup = {
                 name = 'Dalmatian Pup',
                 text = {{
                     '{C:mult}+#1#{} Mult if scored',
@@ -151,7 +151,7 @@ return {
                     'a {C:attention}#2#{}'
                 }
             },
-            j_crazy = {
+            j_taw_pugPuppy = {
                 name = 'Pug Puppy',
                 text = {{
                     '{C:mult}+#1#{} Mult if scored',
@@ -186,7 +186,59 @@ return {
                     'hand contains',
                     'a {C:attention}#2#{}'
                 }
-            }
+            },
+            --#endregion
+            --#region CATS --
+            j_taw_maineCoonKitten = {
+                name = 'Maine Coon Kitten',
+                text = {{
+                    '{C:chips}+#1#{} Chips if played',
+                    'hand contains',
+                    'a {C:attention}#2#'
+                },{
+                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                }}
+            },
+            j_taw_siameseKitten = {
+                name = 'Siamese Kitten',
+                text = {{
+                    '{C:chips}+#1#{} Chips if played',
+                    'hand contains',
+                    'a {C:attention}#2#'
+                },{
+                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                }}
+            },
+            j_taw_persianKitten = {
+                name = 'Persian Kitten',
+                text = {{
+                    '{C:chips}+#1#{} Chips if played',
+                    'hand contains',
+                    'a {C:attention}#2#'
+                },{
+                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                }}
+            },
+            j_taw_sphynxKitten = {
+                name = 'Sphynx Kitten',
+                text = {{
+                    '{C:chips}+#1#{} Chips if played',
+                    'hand contains',
+                    'a {C:attention}#2#'
+                },{
+                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                }}
+            },
+            j_taw_bengalKitten = {
+                name = 'Bengal Kitten',
+                text = {{
+                    '{C:chips}+#1#{} Chips if played',
+                    'hand contains',
+                    'a {C:attention}#2#'
+                },{
+                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                }}
+            },
             --#endregion
         },
         Other={},
