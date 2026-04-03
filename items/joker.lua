@@ -140,7 +140,7 @@ SMODS.Joker{ --BlackBear
 SMODS.Joker{ --PolarCub
     key = 'polarCub',
     atlas = 'Jokers',
-    pos = {x = 5, y = 0},
+    pos = {x = 6, y = 0},
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
@@ -177,7 +177,7 @@ SMODS.Joker{ --PolarCub
 SMODS.Joker{ --PolarBear
     key = 'polarBear',
     atlas = 'Jokers',
-    pos = {x = 6, y = 0},
+    pos = {x = 5, y = 0},
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
@@ -591,10 +591,10 @@ SMODS.Joker{ --PugPuppy
         end
     end
 }
-SMODS.Joker{ --Pu
+SMODS.Joker{ --Pug
     key = 'pug',
     atlas = 'Jokers',
-    pos = {x = 0, y = 0},
+    pos = {x = 4, y = 1},
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
