@@ -108,7 +108,7 @@ return {
                     'hand contains',
                     'a {C:attention}#2#{}'
                 },{
-                    '{C:attention}Feed #2#{}',
+                    '{C:attention}Feed #3#{}',
                     'times to grow'
                 }}
             },
@@ -127,7 +127,7 @@ return {
                     'hand contains',
                     'a {C:attention}#2#{}'
                 },{
-                    '{C:attention}Feed #2#{}',
+                    '{C:attention}Feed #3#{}',
                     'times to grow'
                 }}
             },
@@ -146,7 +146,7 @@ return {
                     'hand contains',
                     'a {C:attention}#2#{}'
                 },{
-                    '{C:attention}Feed #2#{}',
+                    '{C:attention}Feed #3#{}',
                     'times to grow'
                 }}
             },
@@ -165,7 +165,7 @@ return {
                     'hand contains',
                     'a {C:attention}#2#{}'
                 },{
-                    '{C:attention}Feed #2#{}',
+                    '{C:attention}Feed #3#{}',
                     'times to grow'
                 }}
             },
@@ -184,7 +184,7 @@ return {
                     'hand contains',
                     'a {C:attention}#2#{}'
                 },{
-                    '{C:attention}Feed #2#{}',
+                    '{C:attention}Feed #3#{}',
                     'times to grow'
                 }}
             },
@@ -205,7 +205,7 @@ return {
                     'hand contains',
                     'a {C:attention}#2#'
                 },{
-                    '{C:attention}Feed #2#{}',
+                    '{C:attention}Feed #3#{}',
                     'times to grow'
                 }}
             },
@@ -224,7 +224,7 @@ return {
                     'hand contains',
                     'a {C:attention}#2#'
                 },{
-                    '{C:attention}Feed #2#{}',
+                    '{C:attention}Feed #3#{}',
                     'times to grow'
                 }}
             },
@@ -243,7 +243,7 @@ return {
                     'hand contains',
                     'a {C:attention}#2#'
                 },{
-                    '{C:attention}Feed #2#{}',
+                    '{C:attention}Feed #3#{}',
                     'times to grow'
                 }}
             },
@@ -262,7 +262,7 @@ return {
                     'hand contains',
                     'a {C:attention}#2#'
                 },{
-                    '{C:attention}Feed #2#{}',
+                    '{C:attention}Feed #3#{}',
                     'times to grow'
                 }}
             },
@@ -281,7 +281,7 @@ return {
                     'hand contains',
                     'a {C:attention}#2#'
                 },{
-                    '{C:attention}Feed #2#{}',
+                    '{C:attention}Feed #3#{}',
                     'times to grow'
                 }}
             },
@@ -298,8 +298,8 @@ return {
             j_taw_tasmanianDevilJoey = {
                 name = 'Tasmanian Devil Joey',
                 text = {{
-                    'Each played and unscored card',
-                    'gives {C:mult}+#1#{} Mult'
+                    'Each played and unscored',
+                    'card gives {C:mult}+#1#{} Mult'
                 },{
                     '{C:attention}Feed #2#{}',
                     'times to grow'
@@ -308,8 +308,8 @@ return {
             j_taw_tasmanianDevil = {
                 name = 'Tasmanian Devil',
                 text = {
-                    'Each played and unscored card',
-                    'gives {C:mult}+#1#{} Mult'
+                    'Each played and unscored',
+                    'card gives {C:mult}+#1#{} Mult'
                 }
             },
             --#endregion
