@@ -663,7 +663,7 @@ SMODS.Joker{ --Husky
     end
 }
 --#endregion
---#region CATS
+--#region CATS --
 SMODS.Joker{ --MaineCoonKitten
     key = "maineCoonKitten",
     atlas = 'Jokers',
@@ -694,6 +694,36 @@ SMODS.Joker{ --MaineCoonKitten
         end
         if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_maineCoon')
+        end
+    end
+}
+SMODS.Joker{ --MaineCoon
+    key = "maineCoon",
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 6,
+    rarity = 1,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = {
+        extra = {
+            t_chips = 100,
+            type = 'Pair'
+        },
+        taw_data = {
+            grow_time = 2,
+            chips_add = 20,
+            chips = 0,
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return{vars = {card.ability.extra.t_chips + card.ability.taw_data.chips, localize(card.ability.extra.type, 'poker_hands')}}
+    end,
+    calculate = function(self, card, context)
+        if context.joker_main and next(context.poker_hands[card.ability.extra.type]) then
+            return {
+                chips = card.ability.extra.t_chips + card.ability.taw_data.chips
+            }
         end
     end
 }
@@ -730,6 +760,36 @@ SMODS.Joker{ --SiameseKitten
         end
     end
 }
+SMODS.Joker{ --SiameseCat
+    key = "siameseCat",
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 6,
+    rarity = 1,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = {
+        extra = {
+            t_chips = 200,
+            type = 'Three of a Kind'
+        },
+        taw_data = {
+            grow_time = 2,
+            chips_add = 40,
+            chips = 0,
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return{vars = {card.ability.extra.t_chips + card.ability.taw_data.chips, localize(card.ability.extra.type, 'poker_hands')}}
+    end,
+    calculate = function(self, card, context)
+        if context.joker_main and next(context.poker_hands[card.ability.extra.type]) then
+            return {
+                chips = card.ability.extra.t_chips + card.ability.taw_data.chips
+            }
+        end
+    end
+}
 SMODS.Joker{ --PersianKitten
     key = "persianKitten",
     atlas = 'Jokers',
@@ -760,6 +820,36 @@ SMODS.Joker{ --PersianKitten
         end
         if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_persianCat')
+        end
+    end
+}
+SMODS.Joker{ --PersianCat
+    key = "persianCat",
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 4,
+    rarity = 1,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = {
+        extra = {
+            t_chips = 160,
+            type = 'Two Pair'
+        },
+        taw_data = {
+            grow_time = 2,
+            chips_add = 30,
+            chips = 0,
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return{vars = {card.ability.extra.t_chips + card.ability.taw_data.chips, localize(card.ability.extra.type, 'poker_hands')}}
+    end,
+    calculate = function(self, card, context)
+        if context.joker_main and next(context.poker_hands[card.ability.extra.type]) then
+            return {
+                chips = card.ability.extra.t_chips + card.ability.taw_data.chips
+            }
         end
     end
 }
@@ -796,6 +886,36 @@ SMODS.Joker{ --SphynxKitten
         end
     end
 }
+SMODS.Joker{ --SphynxCat
+    key = "sphynxCat",
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 6,
+    rarity = 1,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = {
+        extra = {
+            t_chips = 200,
+            type = 'Straight'
+        },
+        taw_data = {
+            grow_time = 2,
+            chips_add = 40,
+            chips = 0,
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return{vars = {card.ability.extra.t_chips + card.ability.taw_data.chips, localize(card.ability.extra.type, 'poker_hands')}}
+    end,
+    calculate = function(self, card, context)
+        if context.joker_main and next(context.poker_hands[card.ability.extra.type]) then
+            return {
+                chips = card.ability.extra.t_chips + card.ability.taw_data.chips
+            }
+        end
+    end
+}
 SMODS.Joker{ --BengalKitten
     key = "bengalKitten",
     atlas = 'Jokers',
@@ -812,7 +932,7 @@ SMODS.Joker{ --BengalKitten
         taw_data = {
             grow_time = 2,
             chips_add = 15,
-            chips = 0,
+            chips = 0
         }
     },
     loc_vars = function(self, info_queue, card)
@@ -826,6 +946,98 @@ SMODS.Joker{ --BengalKitten
         end
         if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_bengalCat')
+        end
+    end
+}
+SMODS.Joker{ --BengalCat
+    key = "bengalCat",
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 6,
+    rarity = 1,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = {
+        extra = {
+            t_chips = 160,
+            type = 'Flush'
+        },
+        taw_data = {
+            grow_time = 2,
+            chips_add = 30,
+            chips = 0,
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return{vars = {card.ability.extra.t_chips + card.ability.taw_data.chips, localize(card.ability.extra.type, 'poker_hands')}}
+    end,
+    calculate = function(self, card, context)
+        if context.joker_main and next(context.poker_hands[card.ability.extra.type]) then
+            return {
+                chips = card.ability.extra.t_chips + card.ability.taw_data.chips
+            }
+        end
+        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+            Taw.grow(card, 'j_taw_bengalCat')
+        end
+    end
+}
+--#endregion
+--#region OTHERS --
+SMODS.Joker{ --TasmanianDevilJoey
+    key = 'tasmanianDevilJoey',
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 4,
+    rarity = 1,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = {
+        extra = {
+            u_mult = 6
+        },
+        taw_data = {
+            grow_time = 2,
+            mult_add = 2,
+            mult = 0
+        }
+    },
+    loc_vars = function(self,info_queue,card)
+        return{vars = {card.ability.extra.u_mult + card.ability.taw_data.mult, card.ability.taw_data.grow_time}}
+    end,
+    calculate = function(self,card,context)
+        if not card.debuff and context.individual and context.cardarea == 'unscored' then
+            return {
+                mult = card.ability.extra.u_mult + card.ability.taw_data.mult
+            }
+        end
+    end
+}
+SMODS.Joker{ --TasmanianDevil
+    key = 'tasmanianDevil',
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 4,
+    rarity = 1,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = {
+        extra = {
+            u_mult = 15
+        },
+        taw_data = {
+            mult_add = 5,
+            mult = 0
+        }
+    },
+    loc_vars = function(self,info_queue,card)
+        return{vars = {card.ability.extra.u_mult + card.ability.taw_data.mult}}
+    end,
+    calculate = function(self,card,context)
+        if not card.debuff and context.individual and context.cardarea == 'unscored' then
+            return {
+                mult = card.ability.extra.u_mult + card.ability.taw_data.mult
+            }
         end
     end
 }

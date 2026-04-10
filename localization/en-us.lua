@@ -11,8 +11,8 @@ return {
                 text = {{
                     '{C:mult}+#1#{} Mult'
                 },{
-                    '{C:attention}Grow{} in',
-                    '{C:attention}#2#{} rounds'
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
                 }}
             },
             j_taw_rat = {
@@ -22,7 +22,7 @@ return {
                 }
             },
             --#endregion
-            --#region BEARS
+            --#region BEARS --
             j_taw_blackBearCub = {
                 name = 'Black Bear Cub',
                 text = {{
@@ -30,7 +30,8 @@ return {
                     '{C:diamonds}#2#{} suit give',
                     '{C:mult}+#1#{} Mult when scored'
                 },{
-                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
                 }}
             },
             j_taw_blackBear = {
@@ -48,7 +49,8 @@ return {
                     '{C:hearts}#2#{} suit give',
                     '{C:mult}+#1#{} Mult when scored'
                 },{
-                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
                 }}
             },
             j_taw_polarBear = {
@@ -66,7 +68,8 @@ return {
                     '{C:spades}#2#{} suit give',
                     '{C:mult}+#1#{} Mult when scored'
                 },{
-                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
                 }}
             },
             j_taw_grizzly = {
@@ -84,7 +87,8 @@ return {
                     '{C:clubs}#2#{} suit give',
                     '{C:mult}+#1#{} Mult when scored'
                 },{
-                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
                 }}
             },
             j_taw_panda = {
@@ -96,7 +100,7 @@ return {
                 }
             },
             --#endregion
-            --#region DOGS
+            --#region DOGS --
             j_taw_goldenPuppy = {
                 name = 'Golden Puppy',
                 text = {{
@@ -104,7 +108,8 @@ return {
                     'hand contains',
                     'a {C:attention}#2#{}'
                 },{
-                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
                 }}
             },
             j_taw_goldenRetriver = {
@@ -122,7 +127,8 @@ return {
                     'hand contains',
                     'a {C:attention}#2#{}'
                 },{
-                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
                 }}
             },
             j_taw_germanShepherd = {
@@ -140,7 +146,8 @@ return {
                     'hand contains',
                     'a {C:attention}#2#{}'
                 },{
-                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
                 }}
             },
             j_taw_dalmatian = {
@@ -158,7 +165,8 @@ return {
                     'hand contains',
                     'a {C:attention}#2#{}'
                 },{
-                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
                 }}
             },
             j_taw_pug = {
@@ -176,7 +184,8 @@ return {
                     'hand contains',
                     'a {C:attention}#2#{}'
                 },{
-                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
                 }}
             },
             j_taw_husky = {
@@ -196,8 +205,17 @@ return {
                     'hand contains',
                     'a {C:attention}#2#'
                 },{
-                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
                 }}
+            },
+            j_taw_maineCoon = {
+                name = 'Maine Coon',
+                text = {
+                    '{C:chips}+#1#{} Chips if played',
+                    'hand contains',
+                    'a {C:attention}#2#'
+                }
             },
             j_taw_siameseKitten = {
                 name = 'Siamese Kitten',
@@ -206,8 +224,17 @@ return {
                     'hand contains',
                     'a {C:attention}#2#'
                 },{
-                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
                 }}
+            },
+            j_taw_siameseCat = {
+                name = 'Siamese Cat',
+                text = {
+                    '{C:chips}+#1#{} Chips if played',
+                    'hand contains',
+                    'a {C:attention}#2#'
+                }
             },
             j_taw_persianKitten = {
                 name = 'Persian Kitten',
@@ -216,8 +243,17 @@ return {
                     'hand contains',
                     'a {C:attention}#2#'
                 },{
-                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
                 }}
+            },
+            j_taw_persianCat = {
+                name = 'Persian Cat',
+                text = {
+                    '{C:chips}+#1#{} Chips if played',
+                    'hand contains',
+                    'a {C:attention}#2#'
+                }
             },
             j_taw_sphynxKitten = {
                 name = 'Sphynx Kitten',
@@ -226,8 +262,17 @@ return {
                     'hand contains',
                     'a {C:attention}#2#'
                 },{
-                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
                 }}
+            },
+            j_taw_sphynxCat = {
+                name = 'Sphynx Cat',
+                text = {
+                    '{C:chips}+#1#{} Chips if played',
+                    'hand contains',
+                    'a {C:attention}#2#'
+                }
             },
             j_taw_bengalKitten = {
                 name = 'Bengal Kitten',
@@ -236,8 +281,36 @@ return {
                     'hand contains',
                     'a {C:attention}#2#'
                 },{
-                    '{C:attention}Grow{} in {C:attention}#3#{} rounds'
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
                 }}
+            },
+            j_taw_bengalCat = {
+                name = 'Bengal Cat',
+                text = {
+                    '{C:chips}+#1#{} Chips if played',
+                    'hand contains',
+                    'a {C:attention}#2#'
+                }
+            },
+            --#endregion
+            --#region OTHERS --
+            j_taw_tasmanianDevilJoey = {
+                name = 'Tasmanian Devil Joey',
+                text = {{
+                    'Each played and unscored card',
+                    'gives {C:mult}+#1#{} Mult'
+                },{
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
+                }}
+            },
+            j_taw_tasmanianDevil = {
+                name = 'Tasmanian Devil',
+                text = {
+                    'Each played and unscored card',
+                    'gives {C:mult}+#1#{} Mult'
+                }
             },
             --#endregion
         },
