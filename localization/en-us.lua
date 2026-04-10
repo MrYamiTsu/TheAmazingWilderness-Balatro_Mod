@@ -298,7 +298,7 @@ return {
             j_taw_tasmanianDevilJoey = {
                 name = 'Tasmanian Devil Joey',
                 text = {{
-                    'Each played and unscored',
+                    'Each {C:attention}played{} and {C:attention}unscored',
                     'card gives {C:mult}+#1#{} Mult'
                 },{
                     '{C:attention}Feed #2#{}',
@@ -308,7 +308,7 @@ return {
             j_taw_tasmanianDevil = {
                 name = 'Tasmanian Devil',
                 text = {
-                    'Each played and unscored',
+                    'Each {C:attention}played{} and {C:attention}unscored',
                     'card gives {C:mult}+#1#{} Mult'
                 }
             },
