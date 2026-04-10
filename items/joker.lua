@@ -711,7 +711,6 @@ SMODS.Joker{ --MaineCoon
             type = 'Pair'
         },
         taw_data = {
-            grow_time = 2,
             chips_add = 20,
             chips = 0,
         }
@@ -774,7 +773,6 @@ SMODS.Joker{ --SiameseCat
             type = 'Three of a Kind'
         },
         taw_data = {
-            grow_time = 2,
             chips_add = 40,
             chips = 0,
         }
@@ -837,7 +835,6 @@ SMODS.Joker{ --PersianCat
             type = 'Two Pair'
         },
         taw_data = {
-            grow_time = 2,
             chips_add = 30,
             chips = 0,
         }
@@ -900,7 +897,6 @@ SMODS.Joker{ --SphynxCat
             type = 'Straight'
         },
         taw_data = {
-            grow_time = 2,
             chips_add = 40,
             chips = 0,
         }
@@ -963,7 +959,6 @@ SMODS.Joker{ --BengalCat
             type = 'Flush'
         },
         taw_data = {
-            grow_time = 2,
             chips_add = 30,
             chips = 0,
         }
@@ -1011,13 +1006,16 @@ SMODS.Joker{ --TasmanianDevilJoey
                 mult = card.ability.extra.u_mult + card.ability.taw_data.mult
             }
         end
+        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+            Taw.grow(card, 'j_taw_tasmanianDevil')
+        end
     end
 }
 SMODS.Joker{ --TasmanianDevil
     key = 'tasmanianDevil',
     atlas = 'Jokers',
     pos = {x = 0, y = 0},
-    cost = 4,
+    cost = 6,
     rarity = 1,
     blueprint_compat = true,
     eternal_compat = true,
@@ -1037,6 +1035,68 @@ SMODS.Joker{ --TasmanianDevil
         if not card.debuff and context.individual and context.cardarea == 'unscored' then
             return {
                 mult = card.ability.extra.u_mult + card.ability.taw_data.mult
+            }
+        end
+    end
+}
+SMODS.Joker { --BabyShrew
+    key = "babyShrew",
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 4,
+    rarity = 1,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = {
+        extra = {
+            mult = 20,
+            size = 3
+        },
+        taw_data = {
+            grow_time = 2,
+            mult_add = 4,
+            mult = 0
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.mult + card.ability.taw_data.mult, card.ability.extra.size, card.ability.taw_data.grow_time}}
+    end,
+    calculate = function(self, card, context)
+        if context.joker_main and #context.full_hand <= card.ability.extra.size then
+            return {
+                mult = card.ability.extra.mult + card.ability.taw_data.mult
+            }
+        end
+        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+            Taw.grow(card, 'j_taw_shrew')
+        end
+    end
+}
+SMODS.Joker { --Shrew
+    key = "shrew",
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 6,
+    rarity = 1,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = {
+        extra = {
+            mult = 40,
+            size = 3
+        },
+        taw_data = {
+            mult_add = 8,
+            mult = 0
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.mult + card.ability.taw_data.mult, card.ability.extra.size}}
+    end,
+    calculate = function(self, card, context)
+        if context.joker_main and #context.full_hand <= card.ability.extra.size then
+            return {
+                mult = card.ability.extra.mult + card.ability.taw_data.mult
             }
         end
     end

@@ -312,6 +312,25 @@ return {
                     'card gives {C:mult}+#1#{} Mult'
                 }
             },
+            j_taw_babyShrew = {
+                name = 'Baby Shrew',
+                text = {{
+                    "{C:red}+#1#{} Mult if played",
+                    "hand contains",
+                    "{C:attention}#2#{} or fewer cards",
+                },{
+                    '{C:attention}Feed #3#{}',
+                    'times to grow'
+                }}
+            },
+            j_taw_shrew = {
+                name = 'Shrew',
+                text = {
+                    "{C:red}+#1#{} Mult if played",
+                    "hand contains",
+                    "{C:attention}#2#{} or fewer cards",
+                }
+            },
             --#endregion
         },
         Other={},
