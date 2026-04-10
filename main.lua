@@ -12,8 +12,8 @@ assert(SMODS.load_file('items/stake.lua'))()
 --#endregion
 --#region ATLAS --
 SMODS.Atlas{
-    key = 'modicon', 
-    path = 'modicon.png', 
+    key = 'modicon',
+    path = 'modicon.png',
     px = 32,
     py = 32
 }
