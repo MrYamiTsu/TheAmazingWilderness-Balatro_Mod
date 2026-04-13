@@ -315,7 +315,7 @@ return {
             j_taw_babyShrew = {
                 name = 'Baby Shrew',
                 text = {{
-                    "{C:red}+#1#{} Mult if played",
+                    "{C:mult}+#1#{} Mult if played",
                     "hand contains",
                     "{C:attention}#2#{} or fewer cards",
                 },{
@@ -326,9 +326,28 @@ return {
             j_taw_shrew = {
                 name = 'Shrew',
                 text = {
-                    "{C:red}+#1#{} Mult if played",
+                    "{C:mult}+#1#{} Mult if played",
                     "hand contains",
                     "{C:attention}#2#{} or fewer cards",
+                }
+            },
+            j_taw_calf = {
+                name = 'Calf',
+                text = {{
+                    "{X:mult,C:white}X#1#{} Mult for each",
+                    "empty {C:attention}Joker{} slot",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive})"
+                },{
+                    '{C:attention}Feed #3#{}',
+                    'times to grow'
+                }}
+            },
+            j_taw_hippopotamus = {
+                name = 'Hippopotamus',
+                text = {
+                    "{X:mult,C:white}X#1#{} Mult for each",
+                    "empty {C:attention}Joker{} slot",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive})"
                 }
             },
             --#endregion

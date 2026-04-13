@@ -8,7 +8,6 @@ assert(SMODS.load_file('utils/hook.lua'))()
 assert(SMODS.load_file('utils/ownership.lua'))()
 assert(SMODS.load_file('items/joker.lua'))()
 assert(SMODS.load_file('items/stake.lua'))()
-
 --#endregion
 --#region ATLAS --
 SMODS.Atlas{

@@ -715,6 +715,9 @@ SMODS.Joker{ --MaineCoon
             chips = 0,
         }
     },
+    in_pool = function(self, args)
+        return false
+    end,
     loc_vars = function(self, info_queue, card)
         return{vars = {card.ability.extra.t_chips + card.ability.taw_data.chips, localize(card.ability.extra.type, 'poker_hands')}}
     end,
@@ -777,6 +780,9 @@ SMODS.Joker{ --SiameseCat
             chips = 0,
         }
     },
+    in_pool = function(self, args)
+        return false
+    end,
     loc_vars = function(self, info_queue, card)
         return{vars = {card.ability.extra.t_chips + card.ability.taw_data.chips, localize(card.ability.extra.type, 'poker_hands')}}
     end,
@@ -839,6 +845,9 @@ SMODS.Joker{ --PersianCat
             chips = 0,
         }
     },
+    in_pool = function(self, args)
+        return false
+    end,
     loc_vars = function(self, info_queue, card)
         return{vars = {card.ability.extra.t_chips + card.ability.taw_data.chips, localize(card.ability.extra.type, 'poker_hands')}}
     end,
@@ -901,6 +910,9 @@ SMODS.Joker{ --SphynxCat
             chips = 0,
         }
     },
+    in_pool = function(self, args)
+        return false
+    end,
     loc_vars = function(self, info_queue, card)
         return{vars = {card.ability.extra.t_chips + card.ability.taw_data.chips, localize(card.ability.extra.type, 'poker_hands')}}
     end,
@@ -963,6 +975,9 @@ SMODS.Joker{ --BengalCat
             chips = 0,
         }
     },
+    in_pool = function(self, args)
+        return false
+    end,
     loc_vars = function(self, info_queue, card)
         return{vars = {card.ability.extra.t_chips + card.ability.taw_data.chips, localize(card.ability.extra.type, 'poker_hands')}}
     end,
@@ -1028,6 +1043,9 @@ SMODS.Joker{ --TasmanianDevil
             mult = 0
         }
     },
+    in_pool = function(self, args)
+        return false
+    end,
     loc_vars = function(self,info_queue,card)
         return{vars = {card.ability.extra.u_mult + card.ability.taw_data.mult}}
     end,
@@ -1039,7 +1057,7 @@ SMODS.Joker{ --TasmanianDevil
         end
     end
 }
-SMODS.Joker { --BabyShrew
+SMODS.Joker{ --BabyShrew
     key = "babyShrew",
     atlas = 'Jokers',
     pos = {x = 0, y = 0},
@@ -1072,7 +1090,7 @@ SMODS.Joker { --BabyShrew
         end
     end
 }
-SMODS.Joker { --Shrew
+SMODS.Joker{ --Shrew
     key = "shrew",
     atlas = 'Jokers',
     pos = {x = 0, y = 0},
@@ -1090,6 +1108,9 @@ SMODS.Joker { --Shrew
             mult = 0
         }
     },
+    in_pool = function(self, args)
+        return false
+    end,
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.mult + card.ability.taw_data.mult, card.ability.extra.size}}
     end,
@@ -1097,6 +1118,75 @@ SMODS.Joker { --Shrew
         if context.joker_main and #context.full_hand <= card.ability.extra.size then
             return {
                 mult = card.ability.extra.mult + card.ability.taw_data.mult
+            }
+        end
+    end
+}
+SMODS.Joker{ --Calf
+    key = "calf",
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 8,
+    rarity = 2,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = {
+        extra = {
+            xmult = 1
+        },
+        taw_data = {
+            grow_time = 2,
+            mult_add = 0.1,
+            mult = 0
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.xmult + card.ability.taw_data.mult, G.jokers and math.max((card.ability.extra.xmult + card.ability.taw_data.mult),
+                        ((G.jokers.config.card_limit - #G.jokers.cards) + #SMODS.find_card("j_taw_calf", true) + #SMODS.find_card("j_taw_hippopotamus", true)) *
+                        (card.ability.extra.xmult + card.ability.taw_data.mult)) or card.ability.extra.xmult, card.ability.taw_data.grow_time}}
+    end,
+    calculate = function(self, card, context)
+        if context.joker_main then
+            return {
+                xmult = math.max((card.ability.extra.xmult + card.ability.taw_data.mult), ((G.jokers.config.card_limit - #G.jokers.cards) +
+                        #SMODS.find_card("j_taw_calf", true) + #SMODS.find_card("j_taw_hippopotamus", true)) * (card.ability.extra.xmult + card.ability.taw_data.mult))
+            }
+        end
+        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+            Taw.grow(card, 'j_taw_hippopotamus')
+        end
+    end
+}
+SMODS.Joker{ --Hippopotamus
+    key = "hippopotamus",
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 10,
+    rarity = 2,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = {
+        extra = {
+            xmult = 1.4
+        },
+        taw_data = {
+            mult_add = 0.2,
+            mult = 0
+        }
+    },
+    in_pool = function(self, args)
+        return false
+    end,
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.xmult + card.ability.taw_data.mult, G.jokers and math.max((card.ability.extra.xmult + card.ability.taw_data.mult),
+                        ((G.jokers.config.card_limit - #G.jokers.cards) + #SMODS.find_card("j_taw_calf", true) + #SMODS.find_card("j_taw_hippopotamus", true)) *
+                        (card.ability.extra.xmult + card.ability.taw_data.mult)) or card.ability.extra.xmult}}
+    end,
+    calculate = function(self, card, context)
+        if context.joker_main then
+            return {
+                xmult = math.max((card.ability.extra.xmult + card.ability.taw_data.mult), ((G.jokers.config.card_limit - #G.jokers.cards) +
+                        #SMODS.find_card("j_taw_calf", true) + #SMODS.find_card("j_taw_hippopotamus", true)) * (card.ability.extra.xmult + card.ability.taw_data.mult))
             }
         end
     end
