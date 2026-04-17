@@ -331,8 +331,8 @@ return {
                     "{C:attention}#2#{} or fewer cards",
                 }
             },
-            j_taw_calf = {
-                name = 'Calf',
+            j_taw_hippopotamusCalf = {
+                name = 'Hippopotamus Calf',
                 text = {{
                     "{X:mult,C:white}X#1#{} Mult for each",
                     "empty {C:attention}Joker{} slot",
@@ -348,6 +348,48 @@ return {
                     "{X:mult,C:white}X#1#{} Mult for each",
                     "empty {C:attention}Joker{} slot",
                     "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive})"
+                }
+            },
+            j_taw_springbokLamb = {
+                name = 'Springbok Lamb',
+                text = {{
+                    "All {C:attention}Flushes{} and {C:attention}Straights",
+                    "can be made with {C:attention}#1#{} cards",
+                    "Gains {C:mult}+#2#{} Mult when playing",
+                    "{C:attention}#1#{} cards or less, reset if not",
+                    "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)"
+                },{
+                    '{C:attention}Feed #4#{}',
+                    'times to grow'
+                }}
+            },
+            j_taw_springbok = {
+                name = 'Springbok',
+                text = {
+                    "All {C:attention}Flushes{} and {C:attention}Straights",
+                    "can be made with {C:attention}#1#{} cards",
+                    "Gains {C:mult}+#2#{} Mult when playing",
+                    "{C:attention}#1#{} cards or less, reset if not",
+                    "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)"
+                }
+            },
+            j_taw_cockatooChick = {
+                name = "Cockatoo Chick",
+                text = {{
+                    "Retrigger {C:attention}#1#{} time",
+                    "all card {C:attention}held in",
+                    "{C:attention}hand{} abilities",
+                },{
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
+                }}
+            },
+            j_taw_cockatoo = {
+                name = "Cockatoo",
+                text = {
+                    "Retrigger {C:attention}#1#{} times",
+                    "all card {C:attention}held in",
+                    "{C:attention}hand{} abilities",
                 }
             },
             --#endregion

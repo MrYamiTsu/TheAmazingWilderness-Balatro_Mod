@@ -26,7 +26,7 @@ SMODS.Joker{ --Ritten
                 mult = card.ability.extra.mult + card.ability.taw_data.mult
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_rat')
         end
     end
@@ -93,7 +93,7 @@ SMODS.Joker{ --BlackBearCub
                 mult = card.ability.extra.s_mult + card.ability.taw_data.mult
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_blackBear')
         end
     end
@@ -160,7 +160,7 @@ SMODS.Joker{ --PolarCub
                 mult = card.ability.extra.s_mult + card.ability.taw_data.mult
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_polarBear')
         end
     end
@@ -227,7 +227,7 @@ SMODS.Joker{ --GrizzlyCub
                 mult = card.ability.extra.s_mult + card.ability.taw_data.mult
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_grizzly')
         end
     end
@@ -294,7 +294,7 @@ SMODS.Joker{ --PandaCub
                 mult = card.ability.extra.s_mult + card.ability.taw_data.mult
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_panda')
         end
     end
@@ -363,7 +363,7 @@ SMODS.Joker{ --GoldenPuppy
                 mult = card.ability.extra.t_mult + card.ability.taw_data.mult
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_goldenRetriver')
         end
     end
@@ -429,7 +429,7 @@ SMODS.Joker{ --ShepherdPup
                 mult = card.ability.extra.t_mult + card.ability.taw_data.mult
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_germanShepherd')
         end
     end
@@ -494,7 +494,7 @@ SMODS.Joker{ --DalmatianPup
                 mult = card.ability.extra.t_mult + card.ability.taw_data.mult
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_dalmatian')
         end
     end
@@ -559,7 +559,7 @@ SMODS.Joker{ --PugPuppy
                 mult = card.ability.extra.t_mult + card.ability.taw_data.mult
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_pug')
         end
     end
@@ -625,7 +625,7 @@ SMODS.Joker{ --HuskyCub
                 mult = card.ability.extra.t_mult + card.ability.taw_data.mult
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_husky')
         end
     end
@@ -692,7 +692,7 @@ SMODS.Joker{ --MaineCoonKitten
                 chips = card.ability.extra.t_chips + card.ability.taw_data.chips
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_maineCoon')
         end
     end
@@ -757,7 +757,7 @@ SMODS.Joker{ --SiameseKitten
                 chips = card.ability.extra.t_chips + card.ability.taw_data.chips
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_siameseCat')
         end
     end
@@ -822,7 +822,7 @@ SMODS.Joker{ --PersianKitten
                 chips = card.ability.extra.t_chips + card.ability.taw_data.chips
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_persianCat')
         end
     end
@@ -887,7 +887,7 @@ SMODS.Joker{ --SphynxKitten
                 chips = card.ability.extra.t_chips + card.ability.taw_data.chips
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_sphynxCat')
         end
     end
@@ -952,7 +952,7 @@ SMODS.Joker{ --BengalKitten
                 chips = card.ability.extra.t_chips + card.ability.taw_data.chips
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_bengalCat')
         end
     end
@@ -987,7 +987,7 @@ SMODS.Joker{ --BengalCat
                 chips = card.ability.extra.t_chips + card.ability.taw_data.chips
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_bengalCat')
         end
     end
@@ -1021,7 +1021,7 @@ SMODS.Joker{ --TasmanianDevilJoey
                 mult = card.ability.extra.u_mult + card.ability.taw_data.mult
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_tasmanianDevil')
         end
     end
@@ -1085,7 +1085,7 @@ SMODS.Joker{ --BabyShrew
                 mult = card.ability.extra.mult + card.ability.taw_data.mult
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_shrew')
         end
     end
@@ -1122,8 +1122,8 @@ SMODS.Joker{ --Shrew
         end
     end
 }
-SMODS.Joker{ --Calf
-    key = "calf",
+SMODS.Joker{ --HippopotamusCalf
+    key = "hippopotamusCalf",
     atlas = 'Jokers',
     pos = {x = 0, y = 0},
     cost = 8,
@@ -1142,17 +1142,17 @@ SMODS.Joker{ --Calf
     },
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.xmult + card.ability.taw_data.mult, G.jokers and math.max((card.ability.extra.xmult + card.ability.taw_data.mult),
-                        ((G.jokers.config.card_limit - #G.jokers.cards) + #SMODS.find_card("j_taw_calf", true) + #SMODS.find_card("j_taw_hippopotamus", true)) *
+                        ((G.jokers.config.card_limit - #G.jokers.cards) + #SMODS.find_card("j_taw_hippopotamusCalf", true) + #SMODS.find_card("j_taw_hippopotamus", true)) *
                         (card.ability.extra.xmult + card.ability.taw_data.mult)) or card.ability.extra.xmult, card.ability.taw_data.grow_time}}
     end,
     calculate = function(self, card, context)
         if context.joker_main then
             return {
                 xmult = math.max((card.ability.extra.xmult + card.ability.taw_data.mult), ((G.jokers.config.card_limit - #G.jokers.cards) +
-                        #SMODS.find_card("j_taw_calf", true) + #SMODS.find_card("j_taw_hippopotamus", true)) * (card.ability.extra.xmult + card.ability.taw_data.mult))
+                        #SMODS.find_card("j_taw_hippopotamusCalf", true) + #SMODS.find_card("j_taw_hippopotamus", true)) * (card.ability.extra.xmult + card.ability.taw_data.mult))
             }
         end
-        if context.end_of_round and context.main_eval and card.ability.taw_data.grow_time <= 0 then
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_hippopotamus')
         end
     end
@@ -1179,14 +1179,161 @@ SMODS.Joker{ --Hippopotamus
     end,
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.xmult + card.ability.taw_data.mult, G.jokers and math.max((card.ability.extra.xmult + card.ability.taw_data.mult),
-                        ((G.jokers.config.card_limit - #G.jokers.cards) + #SMODS.find_card("j_taw_calf", true) + #SMODS.find_card("j_taw_hippopotamus", true)) *
+                        ((G.jokers.config.card_limit - #G.jokers.cards) + #SMODS.find_card("j_taw_hippopotamusCalf", true) + #SMODS.find_card("j_taw_hippopotamus", true)) *
                         (card.ability.extra.xmult + card.ability.taw_data.mult)) or card.ability.extra.xmult}}
     end,
     calculate = function(self, card, context)
         if context.joker_main then
             return {
                 xmult = math.max((card.ability.extra.xmult + card.ability.taw_data.mult), ((G.jokers.config.card_limit - #G.jokers.cards) +
-                        #SMODS.find_card("j_taw_calf", true) + #SMODS.find_card("j_taw_hippopotamus", true)) * (card.ability.extra.xmult + card.ability.taw_data.mult))
+                        #SMODS.find_card("j_taw_hippopotamusCalf", true) + #SMODS.find_card("j_taw_hippopotamus", true)) * (card.ability.extra.xmult + card.ability.taw_data.mult))
+            }
+        end
+    end
+}
+SMODS.Joker{ --SpringbokLamb
+    key = 'springbokLamb',
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 7,
+    rarity = 2,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = {
+        extra = {
+            mult_add = 4,
+            mult = 0,
+            size = 4
+        },
+        taw_data = {
+            grow_time = 2,
+            mult_add = 1,
+            mult = 0
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.size, card.ability.extra.mult_add + card.ability.taw_data.mult, card.ability.extra.mult, card.ability.taw_data.grow_time}}
+    end,
+    calculate = function(self, card, context)
+        if context.before and not context.blueprint then 
+            if #G.play.cards <= card.ability.extra.size then
+                card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_add + card.ability.taw_data.mult
+                return {
+                    message = localize('k_upgrade_ex'),
+                    colour = G.C.CHIPS,
+                }
+            else
+                card.ability.extra.mult = 0
+            end
+        end
+        if context.joker_main and card.ability.extra.mult > 0 then
+            return {
+                mult = card.ability.extra.mult
+            }
+        end
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
+            Taw.grow(card, 'j_taw_springbok')
+        end
+    end
+}
+SMODS.Joker{ --Springbok
+    key = 'springbok',
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 9,
+    rarity = 2,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = {
+        extra = {
+            mult_add = 6,
+            mult = 0,
+            size = 4
+        },
+        taw_data = {
+            mult_add = 2,
+            mult = 0
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.size, card.ability.extra.mult_add + card.ability.taw_data.mult, card.ability.extra.mult, card.ability.taw_data.grow_time}}
+    end,
+    calculate = function(self, card, context)
+        if context.before and not context.blueprint then 
+            if #G.play.cards <= card.ability.extra.size then
+                card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_add + card.ability.taw_data.mult
+                return {
+                    message = localize('k_upgrade_ex'),
+                    colour = G.C.CHIPS,
+                }
+            else
+                card.ability.extra.mult = 0
+            end
+        end
+        if context.joker_main and card.ability.extra.mult > 0 then
+            return {
+                mult = card.ability.extra.mult
+            }
+        end
+    end
+}
+SMODS.Joker{ --CockatooChick
+    key = 'cockatooChick',
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 5,
+    rarity = 2,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = {
+        extra = {
+            repetitions = 1
+        },
+        taw_data = {
+            grow_time = 2,
+            rep_add = 0.4,
+            rep = 0
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.repetitions + card.ability.taw_data.rep, card.ability.taw_data.grow_time}}
+    end,
+    calculate = function(self, card, context)
+        if context.repetition and context.cardarea == G.hand and (next(context.card_effects[1]) or #context.card_effects > 1) then
+            return {
+                repetitions = math.floor(card.ability.extra.repetitions + card.ability.taw_data.rep)
+            }
+        end
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
+            Taw.grow(card, 'j_taw_cockatoo')
+        end
+    end
+}
+SMODS.Joker{ --Cockatoo
+    key = 'cockatoo',
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 7,
+    rarity = 2,
+    blueprint_compat = true,
+    eternal_compat = true,
+    config = {
+        extra = {
+            repetitions = 2
+        },
+        taw_data = {
+            grow_time = 2,
+            rep_add = 0.6,
+            rep = 0
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.repetitions + card.ability.taw_data.rep}}
+    end,
+    calculate = function(self, card, context)
+        if context.repetition and context.cardarea == G.hand and (next(context.card_effects[1]) or #context.card_effects > 1) then
+            return {
+                repetitions = math.floor(card.ability.extra.repetitions + card.ability.taw_data.rep)
             }
         end
     end
