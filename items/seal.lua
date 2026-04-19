@@ -6,7 +6,7 @@ local seals = {
 }
 
 for key, pos in pairs(seals) do
-    SMODS.Stake:take_ownership(key, {
+    SMODS.Seal:take_ownership(key, {
         atlas = 'Seals',
         pos = pos
     }, true)
