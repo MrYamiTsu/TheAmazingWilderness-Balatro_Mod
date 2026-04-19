@@ -8,6 +8,7 @@ assert(SMODS.load_file('utils/hook.lua'))()
 assert(SMODS.load_file('utils/ownership.lua'))()
 assert(SMODS.load_file('items/joker.lua'))()
 assert(SMODS.load_file('items/stake.lua'))()
+assert(SMODS.load_file('items/seal.lua'))()
 --#endregion
 --#region ATLAS --
 SMODS.Atlas{
@@ -31,6 +32,12 @@ SMODS.Atlas{
 SMODS.Atlas{
     key = 'Stickers',
     path = 'Sticker.png',
+    px = 71,
+    py = 95
+}
+SMODS.Atlas{
+    key = 'Seals',
+    path = 'Seal.png',
     px = 71,
     py = 95
 }
