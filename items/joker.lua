@@ -1338,4 +1338,184 @@ SMODS.Joker{ --Cockatoo
         end
     end
 }
+SMODS.Joker{ --HatchlingCobra
+    key = 'hatchlingCobra',
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 1,
+    rarity = 1,
+    blueprint_compat = false,
+    eternal_compat = true,
+    config = {
+        extra = {
+            bankrupt_at = 20
+        },
+        taw_data = {
+            grow_time = 2,
+            bankrupt_add = 2,
+            bankrupt = 0
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.bankrupt_at + card.ability.taw_data.bankrupt, card.ability.taw_data.grow_time}}
+    end,
+    calculate = function(self, card, context)
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
+            Taw.grow(card, 'j_taw_cobra')
+        end
+    end,
+    add_to_deck = function(self, card, from_debuff)
+        G.GAME.bankrupt_at = G.GAME.bankrupt_at - (card.ability.extra.bankrupt_at + card.ability.taw_data.bankrupt)
+    end,
+    remove_from_deck = function(self, card, from_debuff)
+        G.GAME.bankrupt_at = G.GAME.bankrupt_at + (card.ability.extra.bankrupt_at + card.ability.taw_data.bankrupt)
+    end
+}
+SMODS.Joker{ --Cobra
+    key = 'cobra',
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 3,
+    rarity = 1,
+    blueprint_compat = false,
+    eternal_compat = true,
+    config = {
+        extra = {
+            bankrupt_at = 30
+        },
+        taw_data = {
+            bankrupt_add = 3,
+            bankrupt = 0
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.bankrupt_at + card.ability.taw_data.bankrupt}}
+    end,
+    add_to_deck = function(self, card, from_debuff)
+        G.GAME.bankrupt_at = G.GAME.bankrupt_at - (card.ability.extra.bankrupt_at + card.ability.taw_data.bankrupt)
+    end,
+    remove_from_deck = function(self, card, from_debuff)
+        G.GAME.bankrupt_at = G.GAME.bankrupt_at + (card.ability.extra.bankrupt_at + card.ability.taw_data.bankrupt)
+    end
+}
+SMODS.Joker{ --PumaKitten
+    key = "pumaKitten",
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 6,
+    rarity = 2,
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = false,
+    config = {
+        extra = {
+            mult = 0
+        },
+        taw_data = {
+            grow_time = 2,
+            mult_add = 5,
+            mult = 0
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.mult + card.ability.taw_data.mult, card.ability.taw_data.grow_time}}
+    end,
+    calculate = function(self, card, context)
+        if context.setting_blind and not context.blueprint then
+            local my_pos = nil
+            for i = 1, #G.jokers.cards do
+                if G.jokers.cards[i] == card then
+                    my_pos = i
+                    break
+                end
+            end
+            if my_pos and G.jokers.cards[my_pos + 1] and not SMODS.is_eternal(G.jokers.cards[my_pos + 1], card) and not G.jokers.cards[my_pos + 1].getting_sliced then
+                local sliced_card = G.jokers.cards[my_pos + 1]
+                sliced_card.getting_sliced = true
+                G.GAME.joker_buffer = G.GAME.joker_buffer - 1
+                G.E_MANAGER:add_event(Event({
+                    func = function()
+                        G.GAME.joker_buffer = 0
+                        card.ability.extra.mult = card.ability.extra.mult + sliced_card.sell_cost * 2
+                        card:juice_up(0.8, 0.8)
+                        sliced_card:start_dissolve({ HEX("57ecab") }, nil, 1.6)
+                        play_sound('slice1', 0.96 + math.random() * 0.08)
+                        return true
+                    end
+                }))
+                return {
+                    message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult + 2 * sliced_card.sell_cost } },
+                    colour = G.C.RED,
+                    no_juice = true
+                }
+            end
+        end
+        if context.joker_main then
+            return {
+                mult = card.ability.extra.mult + card.ability.taw_data.mult
+            }
+        end
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
+            Taw.grow(card, 'j_taw_puma')
+        end
+    end
+}
+SMODS.Joker{ --Puma
+    key = "puma",
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 8,
+    rarity = 2,
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = false,
+    config = {
+        extra = {
+            mult = 0
+        },
+        taw_data = {
+            mult_add = 5,
+            mult = 0
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.mult + card.ability.taw_data.mult}}
+    end,
+    calculate = function(self, card, context)
+        if context.setting_blind and not context.blueprint then
+            local my_pos = nil
+            for i = 1, #G.jokers.cards do
+                if G.jokers.cards[i] == card then
+                    my_pos = i
+                    break
+                end
+            end
+            if my_pos and G.jokers.cards[my_pos + 1] and not SMODS.is_eternal(G.jokers.cards[my_pos + 1], card) and not G.jokers.cards[my_pos + 1].getting_sliced then
+                local sliced_card = G.jokers.cards[my_pos + 1]
+                sliced_card.getting_sliced = true
+                G.GAME.joker_buffer = G.GAME.joker_buffer - 1
+                G.E_MANAGER:add_event(Event({
+                    func = function()
+                        G.GAME.joker_buffer = 0
+                        card.ability.extra.mult = card.ability.extra.mult + sliced_card.sell_cost * 2
+                        card:juice_up(0.8, 0.8)
+                        sliced_card:start_dissolve({ HEX("57ecab") }, nil, 1.6)
+                        play_sound('slice1', 0.96 + math.random() * 0.08)
+                        return true
+                    end
+                }))
+                return {
+                    message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult + 4 * sliced_card.sell_cost } },
+                    colour = G.C.RED,
+                    no_juice = true
+                }
+            end
+        end
+        if context.joker_main then
+            return {
+                mult = card.ability.extra.mult + card.ability.taw_data.mult
+            }
+        end
+    end
+}
 --#endregion

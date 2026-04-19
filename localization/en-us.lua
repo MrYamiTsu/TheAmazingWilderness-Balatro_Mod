@@ -392,6 +392,46 @@ return {
                     "{C:attention}hand{} abilities",
                 }
             },
+            j_taw_hatchlingCobra = {
+                name = "Hatchling Cobra",
+                text = {{
+                    "Go up to",
+                    "{C:red}-$#1#{} in debt",
+                },{
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
+                }}
+            },
+            j_taw_cobra = {
+                name = "Cobra",
+                text = {
+                    "Go up to",
+                    "{C:red}-$#1#{} in debt",
+                }
+            },
+            j_taw_pumaKitten = {
+                name = "Puma Kitten",
+                text = {{
+                    "When {C:attention}Blind{} is selected,",
+                    "destroy Joker to the right",
+                    "and permanently add {C:attention}double",
+                    "its sell value to this {C:mult}Mult",
+                    "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)",
+                },{
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
+                }}
+            },
+            j_taw_puma = {
+                name = "Puma",
+                text = {
+                    "When {C:attention}Blind{} is selected,",
+                    "destroy Joker to the right",
+                    "and permanently add {C:attention}quadruple",
+                    "its sell value to this {C:mult}Mult",
+                    "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)",
+                }
+            },
             --#endregion
         },
         Other={},
