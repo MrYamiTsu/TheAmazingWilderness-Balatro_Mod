@@ -294,7 +294,7 @@ return {
                 }
             },
             --#endregion
-            --#region OTHERS --
+            --#region TASMANIANDEVIL --
             j_taw_tasmanianDevilJoey = {
                 name = 'Tasmanian Devil Joey',
                 text = {{
@@ -312,6 +312,8 @@ return {
                     'card gives {C:mult}+#1#{} Mult'
                 }
             },
+            --#endregion
+            --#region SHREW --
             j_taw_babyShrew = {
                 name = 'Baby Shrew',
                 text = {{
@@ -331,6 +333,8 @@ return {
                     "{C:attention}#2#{} or fewer cards",
                 }
             },
+            --#endregion
+            --#region OTHERS --
             j_taw_hippopotamusCalf = {
                 name = 'Hippopotamus Calf',
                 text = {{
@@ -430,6 +434,44 @@ return {
                     "and permanently add {C:attention}quadruple",
                     "its sell value to this {C:mult}Mult",
                     "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)",
+                }
+            },
+            j_taw_peachick = {
+                name = "Peachick",
+                text = {{
+                    '{C:chips}+#1#{} Chips for',
+                    'each remaining',
+                    '{C:attention}discard'
+                },{
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
+                }}
+            },
+            j_taw_peacock = {
+                name = "Peacock",
+                text = {
+                    "{C:chips}+#1#{} Chips for",
+                    "each remaining",
+                    "{C:attention}discard"
+                }
+            },
+            j_taw_hammerheadSharkPup = {
+                name = "Hammerhead Shark Pup",
+                text = {{
+                    "{C:mult}+#1#{} Mult when",
+                    "{C:attention}#2#{} discards",
+                    "remaining"
+                },{
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
+                }}
+            },
+            j_taw_hammerheadShark = {
+                name = "Hammerhead Shark",
+                text = {
+                    "{C:mult}+#1#{} Mult when",
+                    "{C:attention}#2#{} discards",
+                    "remaining"
                 }
             },
             --#endregion

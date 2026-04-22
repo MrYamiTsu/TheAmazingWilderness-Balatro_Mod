@@ -6,7 +6,6 @@ SMODS.Joker{ --Ritten
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             mult = 4
@@ -38,7 +37,6 @@ SMODS.Joker{ --Rat
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             mult = 12
@@ -71,7 +69,6 @@ SMODS.Joker{ --BlackBearCub
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             s_mult = 3,
@@ -105,7 +102,6 @@ SMODS.Joker{ --BlackBear
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             s_mult = 6,
@@ -138,7 +134,6 @@ SMODS.Joker{ --PolarCub
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             s_mult = 3,
@@ -172,7 +167,6 @@ SMODS.Joker{ --PolarBear
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             s_mult = 6,
@@ -205,7 +199,6 @@ SMODS.Joker{ --GrizzlyCub
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             s_mult = 3,
@@ -239,7 +232,6 @@ SMODS.Joker{ --Grizzly
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             s_mult = 6,
@@ -272,7 +264,6 @@ SMODS.Joker{ --PandaCub
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             s_mult = 3,
@@ -306,7 +297,6 @@ SMODS.Joker{ --GiantPanda
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             s_mult = 6,
@@ -341,7 +331,6 @@ SMODS.Joker{ --GoldenPuppy
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             t_mult = 8,
@@ -375,7 +364,6 @@ SMODS.Joker{ --GoldenRetriver
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             t_mult = 16,
@@ -408,7 +396,6 @@ SMODS.Joker{ --ShepherdPup
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config= {
         extra = {
             t_mult = 12,
@@ -441,7 +428,6 @@ SMODS.Joker{ --GermanShepherd
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config= {
         extra = {
             t_mult = 24,
@@ -473,7 +459,6 @@ SMODS.Joker{ --DalmatianPup
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config= {
         extra = {
             t_mult = 10,
@@ -506,7 +491,6 @@ SMODS.Joker{ --Dalmatian
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config= {
         extra = {
             t_mult = 20,
@@ -538,7 +522,6 @@ SMODS.Joker{ --PugPuppy
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config= {
         extra = {
             t_mult = 12,
@@ -571,7 +554,6 @@ SMODS.Joker{ --Pug
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config= {
         extra = {
             t_mult = 24,
@@ -604,7 +586,6 @@ SMODS.Joker{ --HuskyCub
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             t_mult = 10,
@@ -637,7 +618,6 @@ SMODS.Joker{ --Husky
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             t_mult = 20,
@@ -671,7 +651,6 @@ SMODS.Joker{ --MaineCoonKitten
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             t_chips = 50,
@@ -704,7 +683,6 @@ SMODS.Joker{ --MaineCoon
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             t_chips = 100,
@@ -736,7 +714,6 @@ SMODS.Joker{ --SiameseKitten
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             t_chips = 100,
@@ -769,7 +746,6 @@ SMODS.Joker{ --SiameseCat
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             t_chips = 200,
@@ -801,7 +777,6 @@ SMODS.Joker{ --PersianKitten
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             t_chips = 80,
@@ -834,7 +809,6 @@ SMODS.Joker{ --PersianCat
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             t_chips = 160,
@@ -866,7 +840,6 @@ SMODS.Joker{ --SphynxKitten
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             t_chips = 100,
@@ -899,7 +872,6 @@ SMODS.Joker{ --SphynxCat
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             t_chips = 200,
@@ -931,7 +903,6 @@ SMODS.Joker{ --BengalKitten
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             t_chips = 80,
@@ -964,7 +935,6 @@ SMODS.Joker{ --BengalCat
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             t_chips = 160,
@@ -993,7 +963,7 @@ SMODS.Joker{ --BengalCat
     end
 }
 --#endregion
---#region OTHERS --
+--#region TASMANIANDEVIL --
 SMODS.Joker{ --TasmanianDevilJoey
     key = 'tasmanianDevilJoey',
     atlas = 'Jokers',
@@ -1001,7 +971,6 @@ SMODS.Joker{ --TasmanianDevilJoey
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             u_mult = 6
@@ -1033,7 +1002,6 @@ SMODS.Joker{ --TasmanianDevil
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             u_mult = 15
@@ -1057,6 +1025,8 @@ SMODS.Joker{ --TasmanianDevil
         end
     end
 }
+--#endregion
+--#region SHREW --
 SMODS.Joker{ --BabyShrew
     key = "babyShrew",
     atlas = 'Jokers',
@@ -1064,7 +1034,6 @@ SMODS.Joker{ --BabyShrew
     cost = 4,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             mult = 20,
@@ -1097,7 +1066,6 @@ SMODS.Joker{ --Shrew
     cost = 6,
     rarity = 1,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             mult = 40,
@@ -1122,6 +1090,8 @@ SMODS.Joker{ --Shrew
         end
     end
 }
+--#endregion
+--#region OTHERS --
 SMODS.Joker{ --HippopotamusCalf
     key = "hippopotamusCalf",
     atlas = 'Jokers',
@@ -1129,7 +1099,6 @@ SMODS.Joker{ --HippopotamusCalf
     cost = 8,
     rarity = 2,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             xmult = 1
@@ -1164,7 +1133,6 @@ SMODS.Joker{ --Hippopotamus
     cost = 10,
     rarity = 2,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             xmult = 1.4
@@ -1198,7 +1166,6 @@ SMODS.Joker{ --SpringbokLamb
     cost = 7,
     rarity = 2,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             mult_add = 4,
@@ -1243,7 +1210,6 @@ SMODS.Joker{ --Springbok
     cost = 9,
     rarity = 2,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             mult_add = 6,
@@ -1284,7 +1250,6 @@ SMODS.Joker{ --CockatooChick
     cost = 5,
     rarity = 2,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             repetitions = 1
@@ -1316,7 +1281,6 @@ SMODS.Joker{ --Cockatoo
     cost = 7,
     rarity = 2,
     blueprint_compat = true,
-    eternal_compat = true,
     config = {
         extra = {
             repetitions = 2
@@ -1345,7 +1309,6 @@ SMODS.Joker{ --HatchlingCobra
     cost = 1,
     rarity = 1,
     blueprint_compat = false,
-    eternal_compat = true,
     config = {
         extra = {
             bankrupt_at = 20
@@ -1378,7 +1341,6 @@ SMODS.Joker{ --Cobra
     cost = 3,
     rarity = 1,
     blueprint_compat = false,
-    eternal_compat = true,
     config = {
         extra = {
             bankrupt_at = 30
@@ -1405,7 +1367,6 @@ SMODS.Joker{ --PumaKitten
     cost = 6,
     rarity = 2,
     blueprint_compat = true,
-    eternal_compat = true,
     perishable_compat = false,
     config = {
         extra = {
@@ -1467,7 +1428,6 @@ SMODS.Joker{ --Puma
     cost = 8,
     rarity = 2,
     blueprint_compat = true,
-    eternal_compat = true,
     perishable_compat = false,
     config = {
         extra = {
@@ -1512,6 +1472,124 @@ SMODS.Joker{ --Puma
             end
         end
         if context.joker_main then
+            return {
+                mult = card.ability.extra.mult + card.ability.taw_data.mult
+            }
+        end
+    end
+}
+SMODS.Joker{ --Peachick
+    key = "peachick",
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 5,
+    rarity = 1,
+    blueprint_compat = true,
+    config = {
+        extra = {
+            chips = 30
+        },
+        taw_data = {
+            grow_time = 2,
+            chips_add = 10,
+            chips = 0
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.chips + card.ability.taw_data.chips, card.ability.taw_data.grow_time}}
+    end,
+    calculate = function(self, card, context)
+        if context.joker_main then
+            return {
+                chips = G.GAME.current_round.discards_left * (card.ability.extra.chips + card.ability.taw_data.chips)
+            }
+        end
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
+            Taw.grow(card, 'j_taw_peacock')
+        end
+    end
+}
+SMODS.Joker{ --Peachick
+    key = "peachick",
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 7,
+    rarity = 1,
+    blueprint_compat = true,
+    config = {
+        extra = {
+            chips = 60
+        },
+        taw_data = {
+            chips_add = 20,
+            chips = 0
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.chips + card.ability.taw_data.chips}}
+    end,
+    calculate = function(self, card, context)
+        if context.joker_main then
+            return {
+                chips = G.GAME.current_round.discards_left * (card.ability.extra.chips + card.ability.taw_data.chips)
+            }
+        end
+    end
+}
+SMODS.Joker{ --HammerheadSharkPup
+    key = "hammerheadSharkPup",
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 5,
+    rarity = 1,
+    blueprint_compat = true,
+    config = {
+        extra = {
+            mult = 15,
+            d_remaining = 0
+        },
+        taw_data = {
+            grow_time = 2,
+            mult_add = 5,
+            mult = 0
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.mult + card.ability.taw_data.mult, card.ability.extra.d_remaining, card.ability.taw_data.grow_time}}
+    end,
+    calculate = function(self, card, context)
+        if context.joker_main and G.GAME.current_round.discards_left == card.ability.extra.d_remaining then
+            return {
+                mult = card.ability.extra.mult + card.ability.taw_data.mult
+            }
+        end
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
+            Taw.grow(card, 'j_taw_hammerheadShark')
+        end
+    end
+}
+SMODS.Joker{ --HammerheadShark
+    key = "hammerheadShark",
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 7,
+    rarity = 1,
+    blueprint_compat = true,
+    config = {
+        extra = {
+            mult = 25,
+            d_remaining = 0
+        },
+        taw_data = {
+            mult_add = 10,
+            mult = 0
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.mult + card.ability.taw_data.mult, card.ability.extra.d_remaining}}
+    end,
+    calculate = function(self, card, context)
+        if context.joker_main and G.GAME.current_round.discards_left == card.ability.extra.d_remaining then
             return {
                 mult = card.ability.extra.mult + card.ability.taw_data.mult
             }

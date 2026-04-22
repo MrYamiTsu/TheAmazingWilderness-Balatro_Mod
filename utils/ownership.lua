@@ -17,7 +17,11 @@ local list_vanilla = {
     'j_half',
     'j_stencil',
     'j_four_fingers',
-    'j_mime'
+    'j_mime',
+    'j_credit_card',
+    'j_ceremonial',
+    'j_banner',
+    'j_mystic_summit'
 }
 for index, value in ipairs(list_vanilla) do
     SMODS.Joker:take_ownership(value, { in_pool = function(self, args) return false end, no_collection = true })
