@@ -1509,8 +1509,8 @@ SMODS.Joker{ --Peachick
         end
     end
 }
-SMODS.Joker{ --Peachick
-    key = "peachick",
+SMODS.Joker{ --Peacock
+    key = "peacock",
     atlas = 'Jokers',
     pos = {x = 0, y = 0},
     cost = 7,
