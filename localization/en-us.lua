@@ -458,19 +458,17 @@ return {
             j_taw_hammerheadSharkPup = {
                 name = "Hammerhead Shark Pup",
                 text = {{
-                    "{C:mult}+#1#{} Mult when",
-                    "{C:attention}#2#{} discards",
+                    "{C:mult}+#1#{} Mult when {C:attention}#2#{} discards",
                     "remaining"
                 },{
-                    '{C:attention}Feed #2#{}',
+                    '{C:attention}Feed #3#{}',
                     'times to grow'
                 }}
             },
             j_taw_hammerheadShark = {
                 name = "Hammerhead Shark",
                 text = {
-                    "{C:mult}+#1#{} Mult when",
-                    "{C:attention}#2#{} discards",
+                    "{C:mult}+#1#{} Mult when {C:attention}#2#{} discards",
                     "remaining"
                 }
             },
