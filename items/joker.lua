@@ -1168,36 +1168,16 @@ SMODS.Joker{ --SpringbokLamb
     blueprint_compat = true,
     config = {
         extra = {
-            mult_add = 4,
-            mult = 0,
             size = 4
         },
         taw_data = {
-            grow_time = 2,
-            mult_add = 1,
-            mult = 0
+            grow_time = 2
         }
     },
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.size, card.ability.extra.mult_add + card.ability.taw_data.mult, card.ability.extra.mult, card.ability.taw_data.grow_time}}
     end,
     calculate = function(self, card, context)
-        if context.before and not context.blueprint then 
-            if #G.play.cards <= card.ability.extra.size then
-                card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_add + card.ability.taw_data.mult
-                return {
-                    message = localize('k_upgrade_ex'),
-                    colour = G.C.CHIPS,
-                }
-            else
-                card.ability.extra.mult = 0
-            end
-        end
-        if context.joker_main and card.ability.extra.mult > 0 then
-            return {
-                mult = card.ability.extra.mult
-            }
-        end
         if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
             Taw.grow(card, 'j_taw_springbok')
         end
@@ -1212,35 +1192,11 @@ SMODS.Joker{ --Springbok
     blueprint_compat = true,
     config = {
         extra = {
-            mult_add = 6,
-            mult = 0,
-            size = 4
-        },
-        taw_data = {
-            mult_add = 2,
-            mult = 0
+            size = 3
         }
     },
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.size, card.ability.extra.mult_add + card.ability.taw_data.mult, card.ability.extra.mult, card.ability.taw_data.grow_time}}
-    end,
-    calculate = function(self, card, context)
-        if context.before and not context.blueprint then 
-            if #G.play.cards <= card.ability.extra.size then
-                card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_add + card.ability.taw_data.mult
-                return {
-                    message = localize('k_upgrade_ex'),
-                    colour = G.C.CHIPS,
-                }
-            else
-                card.ability.extra.mult = 0
-            end
-        end
-        if context.joker_main and card.ability.extra.mult > 0 then
-            return {
-                mult = card.ability.extra.mult
-            }
-        end
     end
 }
 SMODS.Joker{ --CockatooChick
@@ -1593,6 +1549,178 @@ SMODS.Joker{ --HammerheadShark
             return {
                 mult = card.ability.extra.mult + card.ability.taw_data.mult
             }
+        end
+    end
+}
+SMODS.Joker{ --MicroGecko
+    key = 'microGecko',
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 6,
+    rarity = 2,
+    blueprint_compat = true,
+    config = {
+        extra = {
+            cash = 12,
+            xmult = 0.8
+        },
+        taw_data = {
+            grow_time = 2,
+            cash_add = 2,
+            cash = 0
+        }
+    },
+    loc_vars = function(self,info_queue,center)
+        return{vars = {center.ability.extra.cash + center.ability.taw_data.cash, center.ability.extra.xmult}}
+    end,
+    calculate = function(self,card,context)
+        if context.setting_blind then
+            return {
+                dollars = card.ability.extra.cash + card.ability.taw_data.cash
+            }
+        end
+        if context.joker_main then
+            return {
+                x_mult = card.ability.extra.xmult
+            }
+        end
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
+            Taw.grow(card, 'j_taw_geckoLizard')
+        end
+    end
+}
+SMODS.Joker{ --GeckoLizard
+    key = 'geckoLizard',
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 8,
+    rarity = 2,
+    blueprint_compat = true,
+    config = {
+        extra = {
+            cash = 18,
+            xmult = 0.8
+        },
+        taw_data = {
+            cash_add = 3,
+            cash = 0
+        }
+    },
+    loc_vars = function(self,info_queue,center)
+        return{vars = {center.ability.extra.cash + center.ability.taw_data.cash, center.ability.extra.xmult}}
+    end,
+    calculate = function(self,card,context)
+        if context.setting_blind then
+            return {
+                dollars = card.ability.extra.cash + card.ability.taw_data.cash
+            }
+        end
+        if context.joker_main then
+            return {
+                x_mult = card.ability.extra.xmult
+            }
+        end
+    end
+}
+SMODS.Joker{ --IbexKid
+    key = "ibexKid",
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 6,
+    rarity = 2,
+    blueprint_compat = true,
+    config = {
+        extra = {
+            cards = 1
+        },
+        taw_data = {
+            grow_time = 2
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue + 1] = G.P_CENTERS.m_stone
+        return {vars = {card.ability.extra.cards}}
+    end,
+    calculate = function(self, card, context)
+        if context.setting_blind then
+            for i = 1, card.ability.extra.cards do
+                local stone_card = SMODS.create_card { set = "Base", enhancement = "m_stone", area = G.discard }
+                G.playing_card = (G.playing_card and G.playing_card + 1) or 1
+                stone_card.playing_card = G.playing_card
+                table.insert(G.playing_cards, stone_card)
+                G.E_MANAGER:add_event(Event({
+                    func = function()
+                        stone_card:start_materialize({ G.C.SECONDARY_SET.Enhanced })
+                        G.play:emplace(stone_card)
+                        return true
+                    end
+                }))
+                SMODS.calculate_effect({
+                    message = localize('k_plus_stone'),
+                    colour = G.C.SECONDARY_SET.Enhanced,
+                    func = function()
+                        G.E_MANAGER:add_event(Event({
+                            func = function()
+                                G.deck.config.card_limit = G.deck.config.card_limit + 1
+                                return true
+                            end
+                        }))
+                        draw_card(G.play, G.deck, 90, 'up')
+                        SMODS.calculate_context({ playing_card_added = true, cards = { stone_card } })
+                    end
+                }, card)
+            end
+        end
+        if context.end_of_round and context.main_eval and not context.blueprint and card.ability.taw_data.grow_time <= 0 then
+            Taw.grow(card, 'j_taw_ibex')
+        end
+    end
+}
+SMODS.Joker{ --Ibex
+    key = "ibex",
+    atlas = 'Jokers',
+    pos = {x = 0, y = 0},
+    cost = 8,
+    rarity = 2,
+    blueprint_compat = true,
+    config = {
+        extra = {
+            cards = 2
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue + 1] = G.P_CENTERS.m_stone
+        return {vars = {card.ability.extra.cards}}
+    end,
+    calculate = function(self, card, context)
+        if context.setting_blind then
+            for i = 1, card.ability.extra.cards do
+                local stone_card = SMODS.create_card { set = "Base", enhancement = "m_stone", area = G.discard }
+                G.playing_card = (G.playing_card and G.playing_card + 1) or 1
+                stone_card.playing_card = G.playing_card
+                table.insert(G.playing_cards, stone_card)
+                G.E_MANAGER:add_event(Event({
+                    func = function()
+                        stone_card:start_materialize({ G.C.SECONDARY_SET.Enhanced })
+                        G.play:emplace(stone_card)
+                        return true
+                    end
+                }))
+                SMODS.calculate_effect({
+                    message = localize('k_plus_stone'),
+                    colour = G.C.SECONDARY_SET.Enhanced,
+                    func = function()
+                        G.E_MANAGER:add_event(Event({
+                            func = function()
+                                G.deck.config.card_limit = G.deck.config.card_limit + 1
+                                return true
+                            end
+                        }))
+                        draw_card(G.play, G.deck, 90, 'up')
+                        SMODS.calculate_context({ playing_card_added = true, cards = { stone_card } })
+                    end
+                }, card)
+            end
         end
     end
 }

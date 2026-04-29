@@ -11,7 +11,9 @@ end
 --#region JOKER HOOKS --
 local fourth_finger = SMODS.four_fingers
 function SMODS.four_fingers(hand_type)
-    if next(SMODS.find_card('j_taw_springbokLamb') or SMODS.find_card('j_taw_springbok')) then
+    if next(SMODS.find_card('j_taw_springbok')) then
+        return 3
+    elseif next(SMODS.find_card('j_taw_springbokLamb')) then
         return 4
     end
     return fourth_finger(hand_type)

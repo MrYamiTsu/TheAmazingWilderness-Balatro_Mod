@@ -358,10 +358,7 @@ return {
                 name = 'Springbok Lamb',
                 text = {{
                     "All {C:attention}Flushes{} and {C:attention}Straights",
-                    "can be made with {C:attention}#1#{} cards",
-                    "Gains {C:mult}+#2#{} Mult when playing",
-                    "{C:attention}#1#{} cards or less, reset if not",
-                    "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)"
+                    "can be made with {C:attention}#1#{} cards"
                 },{
                     '{C:attention}Feed #4#{}',
                     'times to grow'
@@ -371,10 +368,7 @@ return {
                 name = 'Springbok',
                 text = {
                     "All {C:attention}Flushes{} and {C:attention}Straights",
-                    "can be made with {C:attention}#1#{} cards",
-                    "Gains {C:mult}+#2#{} Mult when playing",
-                    "{C:attention}#1#{} cards or less, reset if not",
-                    "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)"
+                    "can be made with {C:attention}#1#{} cards"
                 }
             },
             j_taw_cockatooChick = {
@@ -472,6 +466,44 @@ return {
                     "remaining"
                 }
             },
+            j_taw_microGecko = {
+                name = "Micro Gecko",
+                text = {{
+                    'When blind is selected,',
+                    'earn {C:money}$#1#',
+                    '{X:mult,C:white}X#2#{} Mult'
+                },{
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
+                }}
+            },
+            j_taw_geckoLizard = {
+                name = "Gecko Lizard",
+                text = {
+                    'When blind is selected,',
+                    'earn {C:money}$#1#',
+                    '{X:mult,C:white}X#2#{} Mult'
+                }
+            },
+            j_taw_ibexKid = {
+                name = "Ibex Kid",
+                text = {{
+                    "Adds #1# {C:attention}Stone{} card",
+                    "to deck when",
+                    "{C:attention}Blind{} is selected"
+                },{
+                    '{C:attention}Feed #2#{}',
+                    'times to grow'
+                }}
+            },
+            j_taw_ibex = {
+                name = "Ibex",
+                text = {
+                    "Adds #1# {C:attention}Stone{} card",
+                    "to deck when",
+                    "{C:attention}Blind{} is selected"
+                }
+            }
             --#endregion
         },
         Other={},
